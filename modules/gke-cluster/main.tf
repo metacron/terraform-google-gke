@@ -163,7 +163,7 @@ resource "google_container_cluster" "cluster" {
     for_each = local.workload_identity_config
 
     content {
-      identity_namespace = workload_identity_config.value.identity_namespace
+      identity_namespace = workload_identity_config.value["identity_namespace"]
     }
   }
 
