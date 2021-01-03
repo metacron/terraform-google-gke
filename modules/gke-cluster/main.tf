@@ -60,6 +60,7 @@ resource "google_container_cluster" "cluster" {
     ]
 
     content {
+      machine_type    = "e2-small"
       service_account = node_config.value
     }
   }
